@@ -15,5 +15,6 @@
     <string name="title_activity_main_activity3">Oblicz ilość spalonej benzyny</string>
     <string name="title_activity_main_activity4">Oblicza spalanie na 100 km</string>
     <string name="title_activity_main_activity5">"Oblicz przejechane kilometry "</string>
+    <string name="title_activity_main_activity6">Oblicz przejechane Kilometry</string>
 
 </resources>

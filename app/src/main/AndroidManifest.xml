@@ -36,6 +36,10 @@
             android:name=".MainActivity5"
             android:label="@string/title_activity_main_activity5" >
         </activity>
+        <activity
+            android:name=".MainActivity6"
+            android:label="@string/title_activity_main_activity6" >
+        </activity>
     </application>
 
 </manifest>
