@@ -82,11 +82,8 @@ public class MainActivity extends ActionBarActivity {
                         Intent b = new Intent(context, MainActivity3.class);
                         startActivity(b);
                         break;
-          /*          case 3:
-                        Intent d =new Intent(context,MainActivity5.class);
-                        startActivity(d);
-                        break;
-            */        case 3:
+
+                    case 3:
                         Intent e =new Intent(context, MainActivity6.class);
                         startActivity(e);
                         break;
