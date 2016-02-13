@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
-public class MainActivity6 extends ActionBarActivity {
+public class ObliczPrzejechaneKilometry extends ActionBarActivity {
     TextView wynik;
     EditText spalanie,spaloneLitry;
     TextWatcher tw;
@@ -24,11 +24,8 @@ public class MainActivity6 extends ActionBarActivity {
         spalanie.addTextChangedListener(tw);
         spaloneLitry.addTextChangedListener(tw);
 
-    } @Override
-          public void onBackPressed (){
-        finish();
     }
-        public MainActivity6(){
+        public ObliczPrzejechaneKilometry(){
         tw=new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

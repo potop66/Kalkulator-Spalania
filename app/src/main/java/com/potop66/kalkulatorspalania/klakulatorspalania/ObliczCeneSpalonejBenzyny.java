@@ -8,16 +8,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
-public class MainActivity4 extends ActionBarActivity {
+public class ObliczCeneSpalonejBenzyny extends ActionBarActivity {
     TextView wynik;
-    EditText spalanie,dystans;
-    float spalanie1 ,dystans1,wynik1;
-    String spalanie2, dystans2,wynik2;
-    int a=0;
+    EditText odleglosc,cena,spalanie ;
+    Double odleglosc1,cena1,spalanie1,wynik1,wynik2;
+    String odleglosc2,cena2,spalanie2,wynik3;
     TextWatcher tw;
 
-    public MainActivity4() {
-        tw = new TextWatcher() {
+    public ObliczCeneSpalonejBenzyny(){
+        tw=new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -30,20 +29,21 @@ public class MainActivity4 extends ActionBarActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-
-
                 try {
+                    odleglosc2 = odleglosc.getText() + "";
+                    cena2 = cena.getText() + "";
                     spalanie2 = spalanie.getText() + "";
-                    dystans2 = dystans.getText() + "";
-                    dystans1 = Float.parseFloat(dystans2);
-                    spalanie1 = Float.parseFloat(spalanie2);
-                    wynik.setText("0.0");
-                    wynik1 = spalanie1 / dystans1 * 100;
+                    odleglosc1 = Double.parseDouble(odleglosc2);
+                    cena1 = Double.parseDouble(cena2);
+                    spalanie1 = Double.parseDouble(spalanie2);
+
+                    wynik1 = odleglosc1 / 100;
+                    wynik2 = wynik1 * cena1 * spalanie1;
                     java.text.DecimalFormat df = new java.text.DecimalFormat();
                     df.setMaximumFractionDigits(2);
                     df.setMinimumFractionDigits(2);
-                    wynik2 = (df.format(wynik1));
-                    wynik.setText(wynik2);
+                    wynik3 = (df.format(wynik2));
+                    wynik.setText(wynik3);
                     return;
                 } catch (Exception var2_6) {
                     wynik.setText("0.0");
@@ -53,20 +53,19 @@ public class MainActivity4 extends ActionBarActivity {
         };
     }
 
-    @Override
-    public void onBackPressed (){
-        finish();
-    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_activity4);
-        spalanie=(EditText) findViewById (R.id.editText6);
-        dystans=(EditText) findViewById (R.id.editText7);
-        wynik=(TextView) findViewById (R.id.textView13);
-        spalanie.addTextChangedListener(tw);
-        dystans.addTextChangedListener(tw);
+        setContentView(R.layout.activity_main_activity2);
+        wynik=(TextView) findViewById(R.id.textView5);
+        odleglosc =(EditText) findViewById (R.id.editText);
+        cena=(EditText) findViewById (R.id.editText2);
+        spalanie=(EditText) findViewById (R.id.editText3);
 
+        odleglosc.addTextChangedListener(tw);
+        cena.addTextChangedListener(tw);
+        spalanie.addTextChangedListener(tw);
     }
 }

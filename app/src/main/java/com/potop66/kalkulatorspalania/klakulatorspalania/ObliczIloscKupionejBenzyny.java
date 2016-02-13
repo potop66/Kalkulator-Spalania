@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
-public class MainActivity3 extends ActionBarActivity {
+public class ObliczIloscKupionejBenzyny extends ActionBarActivity {
      TextView wynik;
     EditText kwota,cena;
     String kwota2, cena2,wynik2;
@@ -17,7 +17,7 @@ public class MainActivity3 extends ActionBarActivity {
     TextWatcher tw;
 
 
-    public MainActivity3(){
+    public ObliczIloscKupionejBenzyny(){
         tw =new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -53,10 +53,7 @@ public class MainActivity3 extends ActionBarActivity {
 
 
     }
-    @Override
-    public void onBackPressed (){
-        finish();
-    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
