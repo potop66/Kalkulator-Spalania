@@ -48,10 +48,8 @@ public class ObliczPrzejechaneKilometry extends ActionBarActivity {
                 df.setMinimumFractionDigits(2);
                 String wynik2 = (df.format(wynik1));
                 wynik.setText(wynik2);
-                return;
             }catch(Exception var2_5){
-                wynik.setText("0.0");
-                return;
+                wynik.setText(R.string.wrongScore);
             }
             }
         };

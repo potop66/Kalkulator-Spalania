@@ -13,7 +13,6 @@ public class ObliczIloscKupionejBenzyny extends ActionBarActivity {
     EditText kwota,cena;
     String kwota2, cena2,wynik2;
     float kwota1,cena1,wynik1;
-    int a=0;
     TextWatcher tw;
 
 
@@ -36,7 +35,7 @@ public class ObliczIloscKupionejBenzyny extends ActionBarActivity {
                     cena2 = cena.getText() + "";
                     kwota1 = Float.parseFloat(kwota2);
                     cena1 = Float.parseFloat(cena2);
-                    wynik.setText("0.0");
+                    wynik.setText(R.string.wrongScore);
                     wynik1 = kwota1 / cena1;
                     java.text.DecimalFormat df = new java.text.DecimalFormat();
                     df.setMaximumFractionDigits(2);
@@ -45,7 +44,7 @@ public class ObliczIloscKupionejBenzyny extends ActionBarActivity {
                     wynik.setText(wynik2);
                     return;
                 }catch (Exception var2_6){
-                    wynik.setText("0.0");
+                    wynik.setText(R.string.wrongScore);
                     return;
             }
         }

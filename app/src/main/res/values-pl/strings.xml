@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Klakulator spalania</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_oblicz_koszt_spalonej_benzyny">"Oblicz koszt spalonej benzyny "</string>
+    <string name="title_activity_main_activity2">"Oblicz koszt spalonej benzyny "</string>
+    <string name="title_activity_main_activity3">Oblicz ilość spalonej benzyny</string>
+    <string name="title_activity_main_activity4">Oblicz spalanie na 100 km</string>
+    <string name="title_activity_main_activity5">"Oblicz przejechane kilometry "</string>
+    <string name="title_activity_main_activity6">Oblicz przejechane Kilometry</string>
+
+
+    <string-array name= "title" >
+        <item>Oblicz  spalanie na 100 km </item>
+        <item>Oblicz koszt spalonej benzyny</item>
+        <item>Oblicz ilość kupionej benzyny </item>
+        <item>Oblicz przejechane kilometry</item>
+        <item>Oblicz ilosc spalonej benzyny</item>
+    </string-array>
+
+    <string-array name="subtitle">
+        <item>znając ilośc spalonej benzyny i przejechane kilometry </item>
+        <item>znając odległosc, cene i spalanie na 100 km</item>
+        <item>znając wydaną kwote i cene benzyny</item>
+        <item>znając spalone litry i spalanie na 100 km</item>
+        <item>znajac przejechane km oraz spalanie na 100 km</item>
+    </string-array>
+
+    <string name="wrongScore">0.0</string>
+    <string name="odlegloscDoPrzejechania">Odległość do przejechania</string>
+    <string name="OdlegloscWKm">Odległość w km</string>
+    <string name="cenaBenzyny">Cena benzyny</string>
+    <string name="liczbaSpalonychLitrowNa100Km">Liczba spalanych litrów na 100 km</string>
+    <string name="kosztSpalonejBenzyny">Koszt spalonej benzyny</string>
+    <string name="cena">Cena</string>
+    <string name="spalanie">spalanie</string>
+    <string name="kwotaWydanychPieniedzyNaBenzyne">Kwota wydanych pieniędzy na benzyne</string>
+    <string name="kwota">kwota</string>
+    <string name="iloscSpalonejBenzynyWLitrach">Ilość spalonej benzyny w litrach</string>
+    <string name="iloscPrzejechanychKilometrow">Ilość przejechanych kilometrów</string>
+    <string name="spalonePaliwo">Spalone paliwo</string>
+    <string name="przejechaneKilometry">Przejechane kilometry</string>
+    <string name="spalanieNa100Kilometrow">Spalanie na 100 kilometrów</string>
+</resources>

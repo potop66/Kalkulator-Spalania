@@ -18,17 +18,18 @@
         </activity>
         <activity
             android:name=".ObliczCeneSpalonejBenzyny"
-            android:label="Oblicz koszt spalonej benzyny"></activity>
+            android:label="@string/title_activity_main_activity2"/>
         <activity
             android:name=".ObliczIloscKupionejBenzyny"
-            android:label="@string/title_activity_main_activity3"></activity>
+            android:label="@string/title_activity_main_activity3"/>
         <activity
             android:name=".ObliczSpalanieNa100km"
-            android:label="@string/title_activity_main_activity4"></activity>
+            android:label="@string/title_activity_main_activity4"/>
         <activity
             android:name=".ObliczPrzejechaneKilometry"
-            android:label="@string/title_activity_main_activity6"></activity>
-        <activity android:name=".ObliczIloscSpalonejBenzyny"></activity>
+            android:label="@string/title_activity_main_activity6"/>
+        <activity android:name=".ObliczIloscSpalonejBenzyny"
+            android:label="@string/title_activity_main_activity3"/>
     </application>
 
 </manifest>

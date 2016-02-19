@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Przejechane Kilometry"
+        android:text="@string/przejechaneKilometry"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -23,7 +23,7 @@
         android:inputType="number|numberDecimal"
         android:ems="10"
         android:id="@+id/editText"
-        android:hint="Odległość w km "
+        android:hint="@string/OdlegloscWKm"
         android:layout_below="@+id/textView"
         android:layout_alignRight="@+id/textView"
         android:layout_alignEnd="@+id/textView"
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Liczba spalanych litrów na 100 km "
+        android:text="@string/liczbaSpalonychLitrowNa100Km"
         android:id="@+id/textView3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Ilosc spalonej benzyny "
+        android:text="@string/iloscSpalonejBenzynyWLitrach"
         android:id="@+id/textView4"
         android:layout_below="@+id/editText3"
         android:layout_alignParentLeft="true"
@@ -61,7 +61,7 @@
         android:layout_below="@+id/textView4"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:text="0.0"
+        android:text="@string/wrongScore"
         android:textColor="#000000" />
 
     <EditText
@@ -72,7 +72,7 @@
         android:layout_below="@+id/textView3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:hint="spalanie"
+        android:hint="@string/spalanie"
         android:inputType="numberDecimal" />
 
 </RelativeLayout>

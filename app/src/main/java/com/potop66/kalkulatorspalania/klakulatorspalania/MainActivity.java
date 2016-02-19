@@ -2,6 +2,7 @@ package com.potop66.kalkulatorspalania.klakulatorspalania;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -20,19 +21,9 @@ public class MainActivity extends ActionBarActivity {
     ListView ListView;
     TextView a;
     List<Map<String, String>> data = new ArrayList<Map<String, String>>();
-    String title[] = new String[]{
-            "Oblicz  spalanie na 100 km",
-            "Oblicz koszt spalonej benzyny",
-            "Oblicz ilość kupionej benzyny ",
-            "Oblicz przejechane kilometry",
-            "Oblicz ilosc spalonej benzyny"};
-    String subtitle[]=new String[]{
-            "znając ilośc spalonej benzyny i przejechane kilometry ",
-            "znając odległosc, cene i spalanie na 100 km",
-            "znając wydaną kwote i cene benzyny",
-            "znając spalone litry i spalanie na 100 km",
-            "znajac przejechane km oraz spalanie na 100 km"
-    };
+    String title[] ;
+    String subtitle[];
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +31,9 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         ListView = (ListView) findViewById(R.id.listView);
          a=(TextView) findViewById(R.id.textView14);
+        Resources res = getResources();
+        title= res.getStringArray(R.array.title);
+        subtitle= res.getStringArray(R.array.subtitle);
         final Context context = this;
 
 
@@ -62,9 +56,8 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                int itemPosition = position;
 
-                switch (itemPosition) {
+                switch (position) {
                     case 0:
                             Intent i = new Intent(context, ObliczSpalanieNa100km.class);
                             startActivity(i);

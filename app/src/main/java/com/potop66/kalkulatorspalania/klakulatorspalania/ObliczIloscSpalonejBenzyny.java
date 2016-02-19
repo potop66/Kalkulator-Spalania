@@ -48,7 +48,7 @@ public class ObliczIloscSpalonejBenzyny extends ActionBarActivity {
                     String wynik2 = (df.format(wynik1));
                     wynik.setText(wynik2);
                 }catch(Exception var2_5){
-                    wynik.setText("0.0");
+                    wynik.setText(R.string.wrongScore);
                 }
             }
         };

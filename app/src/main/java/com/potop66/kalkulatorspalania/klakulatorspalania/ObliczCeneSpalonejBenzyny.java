@@ -46,7 +46,7 @@ public class ObliczCeneSpalonejBenzyny extends ActionBarActivity {
                     wynik.setText(wynik3);
                     return;
                 } catch (Exception var2_6) {
-                    wynik.setText("0.0");
+                    wynik.setText(R.string.wrongScore);
                     return;
                 }
             }

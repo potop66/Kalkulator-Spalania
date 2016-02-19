@@ -13,7 +13,6 @@ public class ObliczSpalanieNa100km extends ActionBarActivity {
     EditText spalanie,dystans;
     float spalanie1 ,dystans1,wynik1;
     String spalanie2, dystans2,wynik2;
-    int a=0;
     TextWatcher tw;
 
     public ObliczSpalanieNa100km() {
@@ -37,17 +36,15 @@ public class ObliczSpalanieNa100km extends ActionBarActivity {
                     dystans2 = dystans.getText() + "";
                     dystans1 = Float.parseFloat(dystans2);
                     spalanie1 = Float.parseFloat(spalanie2);
-                    wynik.setText("0.0");
+                    wynik.setText(R.string.wrongScore);
                     wynik1 = spalanie1 / dystans1 * 100;
                     java.text.DecimalFormat df = new java.text.DecimalFormat();
                     df.setMaximumFractionDigits(2);
                     df.setMinimumFractionDigits(2);
                     wynik2 = (df.format(wynik1));
                     wynik.setText(wynik2);
-                    return;
                 } catch (Exception var2_6) {
-                    wynik.setText("0.0");
-                    return;
+                    wynik.setText(R.string.wrongScore);
                 }
             }
         };
