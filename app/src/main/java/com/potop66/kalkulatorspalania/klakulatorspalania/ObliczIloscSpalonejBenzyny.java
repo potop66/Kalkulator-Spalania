@@ -1,5 +1,6 @@
 package com.potop66.kalkulatorspalania.klakulatorspalania;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -20,6 +21,42 @@ public class ObliczIloscSpalonejBenzyny extends ActionBarActivity {
         wynik = (TextView) findViewById(R.id.textView5);
         przejechaneKm = (EditText) findViewById(R.id.editText);
         spalanieNa100km = (EditText) findViewById(R.id.editText3);
+        SharedPreferences sp=getSharedPreferences("Settings",MODE_PRIVATE);
+        if(sp.getInt("dystans",0)==1 &&sp.getInt("pojemnosc",0)!=0){
+            TextView dystans=(TextView) findViewById(R.id.textView);
+            TextView srednieSpalanie=(TextView) findViewById(R.id.textView3);
+            TextView iloscSpalonejBenzyny=(TextView) findViewById(R.id.textView4);
+            przejechaneKm.setHint("Odleglosc w milach");
+           dystans.setText(R.string.przejechaneMile);
+            if(sp.getInt("pojemnosc",0)==1){
+                srednieSpalanie.setText(R.string.liczbaSpalonychGalonowUsNa100Mil);
+                iloscSpalonejBenzyny.setText(R.string.iloscSpalonejBenzynyWGalachUs);
+            }else{
+                srednieSpalanie.setText(R.string.liczbaSpalonychGalonowUeNa100Mil);
+                iloscSpalonejBenzyny.setText(R.string.iloscSpalonejBenzynyWGalachUe);
+
+            }
+        }else if(sp.getInt("dystans",0)==1) {
+            TextView dystans=(TextView) findViewById(R.id.textView);
+            TextView srednieSpalanie=(TextView) findViewById(R.id.textView3);
+
+            przejechaneKm.setHint("Odleglosc w milach");
+            dystans.setText(R.string.przejechaneMile);
+            srednieSpalanie.setText(R.string.liczbaSpalonychLitrowNa100Mil);
+
+        }else if(sp.getInt("pojemnosc",0)!=0){
+            TextView srednieSpalanie=(TextView) findViewById(R.id.textView3);
+            TextView iloscSpalonejBenzyny=(TextView) findViewById(R.id.textView4);
+            if (sp.getInt("pojemnosc", 0) == 1) {
+                srednieSpalanie.setText(R.string.liczbaSpalonychGalonowUsNa100Km);
+                iloscSpalonejBenzyny.setText(R.string.iloscSpalonejBenzynyWGalachUs);
+
+            }else if (sp.getInt("pojemnosc", 0) == 2){
+                srednieSpalanie.setText(R.string.liczbaSpalonychGalonowUeNa100Km);
+                iloscSpalonejBenzyny.setText(R.string.iloscSpalonejBenzynyWGalachUe);
+
+            }
+        }
         przejechaneKm.addTextChangedListener(tw);
         spalanieNa100km.addTextChangedListener(tw);
     }

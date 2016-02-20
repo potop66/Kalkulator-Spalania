@@ -1,5 +1,6 @@
 package com.potop66.kalkulatorspalania.klakulatorspalania;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
@@ -58,6 +59,25 @@ public class ObliczSpalanieNa100km extends ActionBarActivity {
         spalanie=(EditText) findViewById (R.id.editText6);
         dystans=(EditText) findViewById (R.id.editText7);
         wynik=(TextView) findViewById (R.id.textView13);
+
+
+        SharedPreferences sp=getSharedPreferences("Settings",MODE_PRIVATE);
+        TextView iloscSpalonejBenzyny=(TextView) findViewById(R.id.textView10);
+
+        switch (sp.getInt("pojemnosc",0)){
+            case 1:
+                iloscSpalonejBenzyny.setText(R.string.iloscSpalonejBenzynyWGalachUs);
+                break;
+            case 2:
+                iloscSpalonejBenzyny.setText(R.string.iloscSpalonejBenzynyWGalachUe);
+                break;
+        }
+        if(sp.getInt("dystans",0)==1){
+            TextView dystansTV=(TextView) findViewById(R.id.textView11);
+            dystansTV.setText(R.string.iloscPrzejechanychMil);
+            dystans.setHint(R.string.przejechaneMile);
+        }
+
         spalanie.addTextChangedListener(tw);
         dystans.addTextChangedListener(tw);
 

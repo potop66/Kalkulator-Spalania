@@ -1,5 +1,6 @@
 package com.potop66.kalkulatorspalania.klakulatorspalania;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
@@ -60,7 +61,16 @@ public class ObliczIloscKupionejBenzyny extends ActionBarActivity {
         kwota=(EditText) findViewById (R.id.editText4);
         cena=(EditText) findViewById (R.id.editText5);
         wynik=(TextView) findViewById (R.id.textView9);
-
+        SharedPreferences sp=getSharedPreferences("Settings",MODE_PRIVATE);
+        TextView iloscSpalanejBenzyny=(TextView) findViewById(R.id.textView8);
+        switch(sp.getInt("pojemnosc",0)){
+            case 1:
+                iloscSpalanejBenzyny.setText(R.string.iloscSpalonejBenzynyWGalachUs);
+                break;
+            case 2:
+                iloscSpalanejBenzyny.setText(R.string.iloscSpalonejBenzynyWGalachUe);
+                break;
+        }
         kwota.addTextChangedListener(tw);
         cena.addTextChangedListener(tw);
     }

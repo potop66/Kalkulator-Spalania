@@ -26,7 +26,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:hint="@string/spalanie"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,7 +50,9 @@
         android:layout_below="@+id/textView20"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:hint="@string/spalonePaliwo" />
+        android:hint="@string/spalonePaliwo"
+        android:layout_alignRight="@+id/editText10"
+        android:layout_alignEnd="@+id/editText10" />
 
     <TextView
         android:layout_width="wrap_content"

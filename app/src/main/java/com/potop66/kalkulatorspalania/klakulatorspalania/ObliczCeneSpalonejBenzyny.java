@@ -1,5 +1,6 @@
 package com.potop66.kalkulatorspalania.klakulatorspalania;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
@@ -10,13 +11,14 @@ import android.widget.TextView;
 
 public class ObliczCeneSpalonejBenzyny extends ActionBarActivity {
     TextView wynik;
-    EditText odleglosc,cena,spalanie ;
-    Double odleglosc1,cena1,spalanie1,wynik1,wynik2;
-    String odleglosc2,cena2,spalanie2,wynik3;
+    EditText odleglosc, cena, spalanie;
+    Double odleglosc1, cena1, spalanie1, wynik1, wynik2;
+    String odleglosc2, cena2, spalanie2, wynik3;
     TextWatcher tw;
+    int x = 1;// zmienna ktora wymnaza wszystkie zmiany zachodzace z powodu zamiany km na mile i litrow na gale
 
-    public ObliczCeneSpalonejBenzyny(){
-        tw=new TextWatcher() {
+    public ObliczCeneSpalonejBenzyny() {
+        tw = new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -54,18 +56,47 @@ public class ObliczCeneSpalonejBenzyny extends ActionBarActivity {
     }
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_activity2);
-        wynik=(TextView) findViewById(R.id.textView5);
-        odleglosc =(EditText) findViewById (R.id.editText);
-        cena=(EditText) findViewById (R.id.editText2);
-        spalanie=(EditText) findViewById (R.id.editText3);
+        wynik = (TextView) findViewById(R.id.textView5);
+        odleglosc = (EditText) findViewById(R.id.editText);
+        cena = (EditText) findViewById(R.id.editText2);
+        spalanie = (EditText) findViewById(R.id.editText3);
+        SharedPreferences sp = getSharedPreferences("Settings", MODE_PRIVATE);
 
-        odleglosc.addTextChangedListener(tw);
-        cena.addTextChangedListener(tw);
-        spalanie.addTextChangedListener(tw);
+        if (sp.getInt("dystans", 0) == 1 && sp.getInt("pojemnosc", 0) != 0) {
+            TextView dystans = (TextView) findViewById(R.id.textView);
+            TextView srednieSpalanie = (TextView) findViewById(R.id.textView3);
+            odleglosc.setHint("Odleglosc w milach");
+            dystans.setText(R.string.przejechaneMile);
+            if (sp.getInt("pojemnosc", 0) == 1) {
+                srednieSpalanie.setText(R.string.liczbaSpalonychGalonowUsNa100Mil);
+            } else {
+                srednieSpalanie.setText(R.string.liczbaSpalonychGalonowUeNa100Mil);
+
+            }
+        } else if (sp.getInt("dystans", 0) == 1) {
+            TextView dystans = (TextView) findViewById(R.id.textView);
+            TextView srednieSpalanie = (TextView) findViewById(R.id.textView3);
+
+            odleglosc.setHint("Odleglosc w milach");
+            dystans.setText(R.string.przejechaneMile);
+            srednieSpalanie.setText(R.string.liczbaSpalonychLitrowNa100Mil);
+
+        } else if (sp.getInt("pojemnosc", 0) != 0) {
+            TextView srednieSpalanie = (TextView) findViewById(R.id.textView3);
+            if (sp.getInt("pojemnosc", 0) == 1) {
+                srednieSpalanie.setText(R.string.liczbaSpalonychGalonowUsNa100Km);
+
+            } else if (sp.getInt("pojemnosc", 0) == 2) {
+                srednieSpalanie.setText(R.string.liczbaSpalonychGalonowUeNa100Km);
+
+            }
+            odleglosc.addTextChangedListener(tw);
+            cena.addTextChangedListener(tw);
+            spalanie.addTextChangedListener(tw);
+        }
     }
 }
