@@ -17,6 +17,7 @@ public class ObliczCeneSpalonejBenzyny extends ActionBarActivity {
     TextWatcher tw;
     int x = 1;// zmienna ktora wymnaza wszystkie zmiany zachodzace z powodu zamiany km na mile i litrow na gale
 
+
     public ObliczCeneSpalonejBenzyny() {
         tw = new TextWatcher() {
             @Override
