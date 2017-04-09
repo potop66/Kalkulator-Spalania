@@ -1,12 +1,36 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/ActionBar</item>
 
-    <item name="android:actionBarStyle">@style/ActionBar</item>
-</style>
-<style name="ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
-<item name="android:icon">@drawable/ic_launcher</item>
-</style>
+    </style>
+
+    <style name="ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#3F51B5</item>
+        <item name="android:icon">@android:color/transparent</item>
+        <item name="android:height">55dp</item>
+        <item name="android:titleTextStyle">@style/ActionBarFont</item>
+
+    </style>
+    <style name="ActionBarFont" >
+        <item name="android:tag">Roboto-Black.ttf</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#000000</item>
+
+    </style>
+
+    <style name="main_font">
+        <item name="android:textColor">#000000</item>
+        <item name="android:tag">Roboto-Regular.ttf</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="second_font">
+        <item name="android:textColor">#000000</item>
+        <item name="android:alpha">0.54</item>
+        <item name="android:tag">Roboto-Regular.ttf</item>
+        <item name="android:textSize">14sp</item>
+
+    </style>
 
 </resources>

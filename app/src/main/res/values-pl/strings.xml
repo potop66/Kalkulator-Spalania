@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Klakulator spalania</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_oblicz_koszt_spalonej_benzyny">"Oblicz koszt spalonej benzyny "</string>
-    <string name="title_activity_main_activity2">"Oblicz koszt spalonej benzyny "</string>
-    <string name="title_activity_main_activity3">Oblicz ilość spalonej benzyny</string>
-    <string name="title_activity_main_activity4">Oblicz spalanie na 100 km</string>
-    <string name="title_activity_main_activity5">"Oblicz przejechane kilometry "</string>
-    <string name="title_activity_main_activity6">Oblicz przejechane Kilometry</string>
+    <string name="app_name">Kalkulator spalania</string>
+
 
 
     <string-array name= "title" >
-        <item>Oblicz  srednie spalanie </item>
+        <item>Oblicz średnie spalanie </item>
         <item>Oblicz koszt spalonej benzyny</item>
         <item>Oblicz ilość kupionej benzyny </item>
-        <item>Oblicz przejechane dystans</item>
-        <item>Oblicz ilosc spalonej benzyny</item>
+        <item>Oblicz przejechany dystans</item>
+        <item>Oblicz ilość spalonej benzyny</item>
     </string-array>
 
 
     <string-array name="subtitle">
-        <item>znając ilośc spalonej benzyny i przejechany dystans </item>
-        <item>znając odległosc, cene i srednie spalanie</item>
-        <item>znając wydaną kwote i cene benzyny</item>
-        <item>znając ilosc spalonej benzyny i srednie spalanie</item>
-        <item>znajac przejechany dystans i srednie spalanie</item>
+        <item>znając ilość spalonej benzyny i przejechany dystans </item>
+        <item>znając odległość, cenę i średnie spalanie</item>
+        <item>znając wydaną kwote i cenę benzyny</item>
+        <item>znając ilość spalonej benzyny i średnie spalanie</item>
+        <item>znajac przejechany dystans i średnie spalanie</item>
     </string-array>
 
     <string-array name="dystans">
@@ -47,10 +40,10 @@
     <string name="cenaBenzyny">Cena benzyny</string>
     <string name="liczbaSpalonychLitrowNa100Km">Liczba spalanych litrów na 100 km</string>
     <string name="liczbaSpalonychLitrowNa100Mil">Liczba spalanych litrów na 100 mil</string>
-    <string name="liczbaSpalonychGalonowUsNa100Km">Liczba spalanych galonowUs na 100 km</string>
-    <string name="liczbaSpalonychGalonowUsNa100Mil">Liczba spalanych galonowUs na 100 mil</string>
-    <string name="liczbaSpalonychGalonowUeNa100Mil">Liczba spalanych galonowUe na 100 mil</string>
-    <string name="liczbaSpalonychGalonowUeNa100Km">Liczba spalanych galonowUe na 100 km</string>
+    <string name="liczbaSpalonychGalonowUsNa100Km">Liczba spalanych galonówUs na 100 km</string>
+    <string name="liczbaSpalonychGalonowUsNa100Mil">Liczba spalanych galonówUs na 100 mil</string>
+    <string name="liczbaSpalonychGalonowUeNa100Mil">Liczba spalanych galonówUe na 100 mil</string>
+    <string name="liczbaSpalonychGalonowUeNa100Km">Liczba spalanych galonówUe na 100 km</string>
     <string name="kosztSpalonejBenzyny">Koszt spalonej benzyny</string>
     <string name="cena">Cena</string>
     <string name="spalanie">spalanie</string>
@@ -66,4 +59,7 @@
     <string name="przejechaneMile">Przejechane mile</string>
     <string name="spalanieNa100Kilometrow">Spalanie na 100 kilometrów</string>
     <string name="spalanieNa100Mil">Spalanie na 100 mil</string>
+
+    <string name="banner_home_footer">ca-app-pub-8381360724877110/8301850187</string>
+
 </resources>

@@ -1,0 +1,37 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context="com.potop66.kalkulatorspalania.klakulatorspalania.MainScreenFragment"
+   >
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="387dp"
+        android:id="@android:id/list"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_home_footer"
+        android:layout_gravity="bottom|center_horizontal">
+    </com.google.android.gms.ads.AdView>
+
+    <ImageButton
+        android:layout_width="56dp"
+        android:id="@+id/imageButton"
+        android:layout_gravity="bottom|right|end"
+        android:layout_marginBottom="70dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/rounded_btn_shape"
+        android:src="@drawable/ic_action_name"
+        android:cropToPadding="true"
+        android:layout_height="60dp" />
+
+</FrameLayout>

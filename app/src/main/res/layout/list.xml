@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent" android:layout_height="wrap_content"
-   android:textSize="24sp"
-    android:textColor="#000000"
-    android:id="@+id/Rov"
-    >
+<TwoLineListItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:mode="twoLine"
+    android:paddingEnd="9dp"
+    android:paddingLeft="9dp"
+    android:paddingRight="9dp"
+    android:paddingStart="9dp">
 
-</TextView>
+    <TextView android:id="@android:id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dip"
+        style="@style/main_font"
+       />
+
+    <TextView android:id="@android:id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@android:id/text1"
+        android:layout_alignStart="@android:id/text1"
+        android:layout_alignLeft="@android:id/text1"
+        style="@style/second_font"
+
+        />
+
+</TwoLineListItem>

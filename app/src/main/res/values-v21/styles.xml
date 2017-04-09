@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+        <item name="android:statusBarColor">#3F51B5</item>
+        <item name="android:colorPrimaryDark">#283593</item>
+    </style>
+
+
+</resources>
